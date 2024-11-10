@@ -6,9 +6,9 @@ setup(
     description="A simple math quiz game for DSSS Homework 2.",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
-    author="Your Name",
-    author_email="your.email@example.com",
-    url="https://github.com/yourusername/dsss_homework-2",
+    author="Mohana Kushal Simhadri",
+    author_email="simhadrikushal@gmail.com",
+    url="https://github.com/StonageBanana/dsss_homework-2",
     packages=find_packages(include=["math_quiz", "math_quiz.*"]),
     install_requires=[
         # Specify dependencies here if there are any, e.g., "numpy>=1.19.0"
