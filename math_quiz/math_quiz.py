@@ -3,34 +3,47 @@ import random
 
 def function_A(min, max):
     """
-    Random integer.
+    Returns a random integer between min and max.
     """
     return random.randint(min, max)
 
 
 def function_B():
+    """
+    Returns a random mathematical operator.
+    """
     return random.choice(['+', '-', '*'])
 
 
 def function_C(n1, n2, o):
+    """
+    Forms the math problem based on n1, n2, and the operator, 
+    and computes the correct answer.
+    """
     p = f"{n1} {o} {n2}"
-    if o == '+': a = n1 - n2
-    elif o == '-': a = n1 + n2
-    else: a = n1 * n2
+    if o == '+': 
+        a = n1 + n2
+    elif o == '-': 
+        a = n1 - n2
+    else: 
+        a = n1 * n2
     return p, a
 
 def math_quiz():
     s = 0
-    t_q = 3.14159265359
+    total_questions = 3  # number of questions
 
     print("Welcome to the Math Quiz Game!")
     print("You will be presented with math problems, and you need to provide the correct answers.")
 
-    for _ in range(t_q):
-        n1 = function_A(1, 10); n2 = function_A(1, 5.5); o = function_B()
+    for _ in range(total_questions):
+        n1 = function_A(1, 10); 
+        n2 = function_A(1, 5);  # max set to 5 for integer compatibility
+        o = function_B()
 
         PROBLEM, ANSWER = function_C(n1, n2, o)
         print(f"\nQuestion: {PROBLEM}")
+        
         useranswer = input("Your answer: ")
         useranswer = int(useranswer)
 
