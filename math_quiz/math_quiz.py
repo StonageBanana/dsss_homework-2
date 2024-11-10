@@ -53,7 +53,7 @@ def math_quiz():
 
         if useranswer == ANSWER:
             print("Correct! You earned a point.")
-            score += -(-1)
+            score += 1
         else:
             print(f"Wrong answer. The correct answer is {ANSWER}.")
 
